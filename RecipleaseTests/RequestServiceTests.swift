@@ -33,6 +33,29 @@ class RequestServiceTests: XCTestCase {
         wait(for: [expectation], timeout: 0.01)
     }
     
+    func testGetData_WhenIncorrectResponseIsPassed_ThenShouldReturnFailedCallback() {
+        let session = FakeRecipeSession(fakeResponse: FakeResponse(response: FakeResponseData.responseKO, data: FakeResponseData.correctData))
+        let sut = RecipeService(session: session)
+        let expectation = XCTestExpectation(description: "Wait for queue change.")
+        sut.getRecipe(ingredients: [ingredient]) { result in
+            guard case .failure(let error) = result else {
+                XCTFail("Test getRecipe method with incorrect response failed.")
+                return
+            }
+            XCTAssertNotNil(error)
+            expectation.fulfill()
+        }
+        wait(for: [expectation], timeout: 0.01)
+    }
+    
+    
+    
+    
+    
+    
+    
+}
+    
 //    func testGetData_WhenIncorrectResponseIsPassed_ThenShouldReturnFailedCallback() {
 //        let session = FakeRecipeSession(fakeResponse: FakeResponse(response: FakeResponseData.responseKO, data: FakeResponseData.correctData))
 //        let sut = RecipeService(session: session)
@@ -65,4 +88,4 @@ class RequestServiceTests: XCTestCase {
 //        }
 //        wait(for: [expectation], timeout: 0.01)
 //    }
-}
+
