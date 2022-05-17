@@ -162,8 +162,8 @@
 			isa = PBXGroup;
 			children = (
 				44CCC7DE2823D096009EFF84 /* FakeRecipeSession.swift */,
-				44CCC7E02823D108009EFF84 /* RequestServiceTests.swift */,
 				44CCC7E22823D17C009EFF84 /* FakeResponseData.swift */,
+				44CCC7E02823D108009EFF84 /* RequestServiceTests.swift */,
 				44CCC7E82823E74A009EFF84 /* FakeRecipesData.json */,
 				44CCC7E62823D2A1009EFF84 /* MockCoreDataStack.swift */,
 				44CCC7E42823D279009EFF84 /* CoreDataServiceTests.swift */,

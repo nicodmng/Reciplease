@@ -10,7 +10,7 @@ import Alamofire
 @testable import Reciplease
 
 struct FakeResponse {
-    var response: HTTPURLResponse?
+    var response: HTTPURLResponse? 
     var data: Data?
 }
 
@@ -29,8 +29,8 @@ final class FakeRecipeSession: AlamofireSession {
     // MARK: - Methods
 
     func request(url: URL, callback: @escaping (AFDataResponse<RecipeData>) -> Void) {
-        let recipeData = RecipeData(hits: [])
-        let dataResponse = AFDataResponse<RecipeData>(request: URLRequest(url: url), response: fakeResponse.response, data: fakeResponse.data, metrics: nil, serializationDuration: 0.0, result: .success(recipeData))
+        let result = RecipeData(hits: [])
+        let dataResponse = AFDataResponse<RecipeData>(request: URLRequest(url: url), response: fakeResponse.response, data: fakeResponse.data, metrics: nil, serializationDuration: 0.0, result: .success(result))
         callback(dataResponse)
     }
 }

@@ -69,7 +69,8 @@ class AddIngredientViewController: UIViewController {
                         self.performSegue(withIdentifier: self.segueIdentifier, sender: nil)
                         //self.searchButton.isEnabled = true
                     case .failure(let error):
-                        self.showAlert(message: error.description)
+                        //self.showAlert(message: error.description)
+                        self.showAlert(message: "Erreur")
                     }
                 }
             }

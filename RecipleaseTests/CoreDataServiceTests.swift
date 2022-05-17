@@ -47,10 +47,12 @@ final class CoreDataServiceTests: XCTestCase {
         coreDataService.createFavoriteRecipe(recipe: recipe)
         coreDataService.deleteRecipe(label: recipe.labelData)
         XCTAssertEqual(coreDataService.recipesFavorite.count, 0)
+        XCTAssertTrue(coreDataService.recipesFavorite.isEmpty)
     }
     
     func testDoNotAddRecipeWhenEntityHaveSameLabelName_ThenShouldBeNotAdd() {
-
+        
+        coreDataService.createFavoriteRecipe(recipe: recipe)
         coreDataService.isRecipeRegistered(label: "Lemon")
         coreDataService.recipesFavorite[0].label = recipe.labelData
         XCTAssertTrue(!coreDataService.recipesFavorite.isEmpty)
