@@ -118,6 +118,7 @@
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M1Z-n6-bJS" userLabel="Search Button">
                                 <rect key="frame" x="13" y="692.5" width="388" height="65"/>
+                                <accessibility key="accessibilityConfiguration" label="Chercher une recette"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="65" id="w0B-lv-uS9"/>
                                 </constraints>

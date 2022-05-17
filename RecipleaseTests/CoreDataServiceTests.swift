@@ -53,9 +53,7 @@ final class CoreDataServiceTests: XCTestCase {
     func testDoNotAddRecipeWhenEntityHaveSameLabelName_ThenShouldBeNotAdd() {
         
         coreDataService.createFavoriteRecipe(recipe: recipe)
-        coreDataService.isRecipeRegistered(label: "Lemon")
-        coreDataService.recipesFavorite[0].label = recipe.labelData
-        XCTAssertTrue(!coreDataService.recipesFavorite.isEmpty)
+        XCTAssertTrue(coreDataService.isRecipeRegistered(label: "Lemon"))
     }
 
     func cleanDataBase() {

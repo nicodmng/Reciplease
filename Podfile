@@ -11,11 +11,7 @@ target 'Reciplease' do
     inherit! :search_paths
     # Pods for testing
   end
-
-  target 'RecipleaseUITests' do
-    # Pods for testing
-  end
   
-pod 'Alamofire', '5.5'
+pod 'Alamofire', '5.2'
 
 end

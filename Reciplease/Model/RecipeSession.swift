@@ -11,12 +11,12 @@ import Alamofire
 // MARK: - Protocol
 
 protocol AlamofireSession {
-    func request(url: URL, callback: @escaping (AFDataResponse<RecipeData>) -> Void)
+    func request(url: URL, callback: @escaping (AFDataResponse<Any>) -> Void)
 }
 
 final class RecipeSession: AlamofireSession {
-    func request(url: URL, callback: @escaping (AFDataResponse<RecipeData>) -> Void) {
-        AF.request(url).responseDecodable(of: RecipeData.self) { response in
+    func request(url: URL, callback: @escaping (AFDataResponse<Any>) -> Void) {
+        AF.request(url).responseJSON { response in
             callback(response)
         }
     }

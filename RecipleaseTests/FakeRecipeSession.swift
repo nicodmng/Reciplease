@@ -28,9 +28,8 @@ final class FakeRecipeSession: AlamofireSession {
 
     // MARK: - Methods
 
-    func request(url: URL, callback: @escaping (AFDataResponse<RecipeData>) -> Void) {
-        let result = RecipeData(hits: [])
-        let dataResponse = AFDataResponse<RecipeData>(request: URLRequest(url: url), response: fakeResponse.response, data: fakeResponse.data, metrics: nil, serializationDuration: 0.0, result: .success(result))
+    func request(url: URL, callback: @escaping (AFDataResponse<Any>) -> Void) {
+        let dataResponse = AFDataResponse<Any>(request: nil, response: fakeResponse.response, data: fakeResponse.data, metrics: nil, serializationDuration: 0, result: .success("OK"))
         callback(dataResponse)
     }
 }

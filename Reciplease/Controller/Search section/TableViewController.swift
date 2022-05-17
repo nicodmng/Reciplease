@@ -13,6 +13,7 @@ class TableViewController: UITableViewController {
     
     var hits: [RecipeData.Hit]?
     var recipe: Recipe?
+    var recipeService = RecipeService()
     
     private let segueToRecipeDetail = "segueToRecipeDetailFirst"
     let cellReuseIdentifier = "recipeCell"
@@ -64,5 +65,15 @@ class TableViewController: UITableViewController {
             next.recipe = recipe
         }
     }
-
+    
+//    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+//        guard let hits = hits else { return }
+//
+//        if hits.count - 1 == indexPath.row {
+//            recipeService.nextRecipes(url: URL) { result in
+//                <#code#>
+//            }
+//        }
+//
+//    }
 }
