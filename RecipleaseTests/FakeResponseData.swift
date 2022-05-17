@@ -9,9 +9,9 @@ import Foundation
 
 final class FakeResponseData {
 
-    static let responseOK = HTTPURLResponse(url: URL(string: "https://www.yahoo.com")!, statusCode: 200, httpVersion: nil, headerFields: nil)!
+    static let responseOK = HTTPURLResponse(url: URL(string: "https://www.apple.com")!, statusCode: 200, httpVersion: nil, headerFields: nil)!
     
-    static let responseKO = HTTPURLResponse(url: URL(string: "https://www.yahoo.com")!, statusCode: 500, httpVersion: nil, headerFields: nil)!
+    static let responseKO = HTTPURLResponse(url: URL(string: "https://www.apple.com")!, statusCode: 500, httpVersion: nil, headerFields: nil)!
 
     class NetworkError: Error {}
     static let networkError = NetworkError()

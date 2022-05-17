@@ -15,12 +15,12 @@ struct RecipeData: Decodable {
         
         struct Recipe: Decodable {
             let label: String
-            let yield: Int
-            let totalTime: Int
-            let image: String?
+            let yield: Int?
+            let totalTime: Int?
+            let image: String
             let ingredientLines: [String]
             let url: String
-            let href: String
+            let href: String?
         }
     }
 }

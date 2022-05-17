@@ -13,6 +13,7 @@ class TableViewController: UITableViewController {
     
     var hits: [RecipeData.Hit]?
     var recipe: Recipe?
+    private var recipes: RecipeData?
     var recipeService = RecipeService()
     
     private let segueToRecipeDetail = "segueToRecipeDetailFirst"
@@ -22,7 +23,7 @@ class TableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         tableView.register(UINib(nibName: "RecipesResultCell", bundle: nil), forCellReuseIdentifier: cellReuseIdentifier)
     }
     
@@ -51,29 +52,28 @@ class TableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let hits = hits else { return }
-
+        
         let recipe = hits[indexPath.row].recipe
-
-        self.recipe = Recipe(labelData: recipe.label, yieldData: String(recipe.yield), totalTimeData: String(recipe.totalTime), imageData: recipe.image ?? "", ingredientLinesData: recipe.ingredientLines, urlData: recipe.url)
-
+        
+        self.recipe = Recipe(labelData: recipe.label, yieldData: String(recipe.yield ?? 0), totalTimeData: String(recipe.totalTime ?? 0), imageData: recipe.image, ingredientLinesData: recipe.ingredientLines, urlData: recipe.url)
+        
         performSegue(withIdentifier: "segueToRecipeDetailFirst", sender: nil)
     }
-
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "segueToRecipeDetailFirst",
-            let next = segue.destination as? RecipesDetailViewController {
+           let next = segue.destination as? RecipesDetailViewController {
             next.recipe = recipe
         }
     }
     
-//    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-//        guard let hits = hits else { return }
-//
-//        if hits.count - 1 == indexPath.row {
-//            recipeService.nextRecipes(url: URL) { result in
-//                <#code#>
-//            }
-//        }
-//
-//    }
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        
+        guard let hits = hits else { return }
+        if hits.count - 1 == indexPath.row {
+            print("Reload")
+        }
+    }
+    
 }
+
