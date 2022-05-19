@@ -15,6 +15,7 @@ class AddIngredientViewController: UIViewController {
     private var ingredients = [String]()
     private var recipes: RecipeData?
     private let segueIdentifier = "segueToRecipesList"
+    private var networkError: NetworkError?
     
     // MARK: - IBOutlets & IBActions
     
@@ -58,6 +59,7 @@ class AddIngredientViewController: UIViewController {
     }
     
     private func getRecipes() {
+
         if listIngredientTextView.text.isEmpty {
             showAlert(message: "Your list of ingredient is empty\n Please add an ingredient")
         } else {
@@ -68,9 +70,8 @@ class AddIngredientViewController: UIViewController {
                         self.recipes = recipes
                         self.performSegue(withIdentifier: self.segueIdentifier, sender: nil)
                         //self.searchButton.isEnabled = true
-                    case .failure:
-                        //self.showAlert(message: error.description)
-                        self.showAlert(message: "Erreur")
+                    case .failure (let error):
+                        self.showAlert(message: error.description)
                     }
                 }
             }

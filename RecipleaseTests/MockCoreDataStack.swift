@@ -27,8 +27,6 @@ final class MockCoreDataStack: CoreDataStack {
                 fatalError("Unresolved error \(error), \(error.userInfo)")
             }
         }
-        // self = réf. à la classe mère
-        // persistentContainer remplacé par container
         self.persistentContainer = container
     }
 }

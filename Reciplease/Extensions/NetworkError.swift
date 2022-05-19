@@ -11,15 +11,15 @@ enum NetworkError: Error {
     case noData, invalidResponse, undecodableData
 }
 
-//extension NetworkError: CustomStringConvertible {
-//    var description: String {
-//        switch self {
-//        case .noData:
-//            return "Service momentanément indisponible"
-//        case .invalidResponse:
-//            return "Service momentanément indisponible"
-//        case .undecodableData:
-//            return "Service momentanément indisponible"
-//        }
-//    }
-//}
+extension NetworkError: CustomStringConvertible {
+    var description: String {
+        switch self {
+        case .noData:
+            return "Service momentanément indisponible : no data"
+        case .invalidResponse:
+            return "Service momentanément indisponible : invalid response"
+        case .undecodableData:
+            return "Service momentanément indisponible : undecodable data"
+        }
+    }
+}
