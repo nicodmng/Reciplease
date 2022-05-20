@@ -68,9 +68,12 @@ class TableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        
         guard let hits = hits else { return }
+
         if hits.count - 1 == indexPath.row {
+            let nextRecipe = recipes?.hits[0].links?.next?.href
+            
+            print("!!!!!!!!!\(nextRecipe)")
             print("Reload")
         }
     }

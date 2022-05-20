@@ -12,6 +12,7 @@ final class RecipeService {
     // MARK: - Properties
     
     let session: AlamofireSession
+    var recipeData: RecipeData?
     
     // MARK: - Initializer
     
@@ -52,27 +53,11 @@ final class RecipeService {
         }
     }
     
-//    func nextRecipes(url: String, callback: @escaping (Result<RecipeData, NetworkError>) -> Void) {
-//
-//        guard let url = URL(string:"https://api.edamam.com/api/recipes/v2?q=chicken&app_key=046769644acb80f3d20a31450e827f43&_cont=CHcVQBtNNQphDmgVQntAEX4BYldtBAUGS2BABWUUZ1xzBgADUXlSUGtFZFV7BwAPEjZGATdAagEiBQFVFWVHCzBCZgd1DAAVLnlSVSBMPkd5BgMbUSYRVTdgMgksRlpSAAcRXTVGcV84SU4%3D&type=public&app_id=dde6421f" ) else { return }
-//        
-//        session.request(url: url) { dataResponse in
-//            guard let data = dataResponse.data else {
-//                callback(.failure(.noData))
-//                return
-//            }
-//            
-//            guard dataResponse.response?.statusCode == 200 else {
-//                callback(.failure(.invalidResponse))
-//                return
-//            }
-//            
-//            guard let dataDecoded = try? JSONDecoder().decode(RecipeData.self, from: data) else {
-//                callback(.failure(.undecodableData))
-//                return
-//            }
-//            callback(.success(dataDecoded))
-//        }
-//    }
+    func nextRecipes(url: String, callback: @escaping (Result<RecipeData, NetworkError>) -> Void) {
+
+        
+    }
+
+
 }
 // End of Class
