@@ -49,7 +49,8 @@
                                                         </accessibility>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="50" id="DJ8-uF-NoJ"/>
-                                                            <constraint firstAttribute="width" constant="50" id="gyO-8Q-U58"/>
+                                                            <constraint firstAttribute="width" secondItem="ZeH-lF-RWm" secondAttribute="height" multiplier="1:1" id="IHR-wN-qIT"/>
+                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="gyO-8Q-U58"/>
                                                         </constraints>
                                                         <color key="tintColor" red="0.84705877299999999" green="0.8156862855" blue="0.75686275960000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <state key="normal" title="Button"/>
@@ -66,6 +67,11 @@
                                                         </connections>
                                                     </button>
                                                 </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="ZeH-lF-RWm" secondAttribute="bottom" id="6Zn-zO-3YR"/>
+                                                    <constraint firstItem="ZeH-lF-RWm" firstAttribute="top" secondItem="xqB-HB-JJZ" secondAttribute="top" id="Jkc-Ug-T1K"/>
+                                                    <constraint firstAttribute="trailing" secondItem="ZeH-lF-RWm" secondAttribute="trailing" id="yOf-xF-PSh"/>
+                                                </constraints>
                                             </stackView>
                                         </subviews>
                                     </stackView>
@@ -86,18 +92,19 @@
                                         <rect key="frame" x="0.0" y="0.0" width="384" height="50"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your ingredients" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qw8-nP-ew1" userLabel="Your ingredients Label">
-                                                <rect key="frame" x="0.0" y="0.0" width="306" height="50"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="311" height="50"/>
                                                 <accessibility key="accessibilityConfiguration" hint="list title" identifier="yourIngredientsLabel" label="your ingredient label"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="27"/>
                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Ef-Nz-N2z" userLabel="Clear Button">
-                                                <rect key="frame" x="329" y="0.0" width="55" height="50"/>
+                                                <rect key="frame" x="334" y="0.0" width="50" height="50"/>
                                                 <color key="backgroundColor" red="0.97254908080000002" green="0.93333339689999995" blue="0.88627451660000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <accessibility key="accessibilityConfiguration" hint="button who removes recipes from the list" identifier="removeRecipesButton" label="remove recipes"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="55" id="o12-Y7-lqq"/>
+                                                    <constraint firstAttribute="width" secondItem="9Ef-Nz-N2z" secondAttribute="height" multiplier="1:1" id="RxL-rr-C93"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="o12-Y7-lqq"/>
                                                 </constraints>
                                                 <color key="tintColor" systemColor="labelColor"/>
                                                 <state key="normal" title="Button"/>
@@ -108,6 +115,9 @@
                                             </button>
                                         </subviews>
                                         <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="9Ef-Nz-N2z" secondAttribute="bottom" id="CVS-v2-oha"/>
+                                            <constraint firstAttribute="trailing" secondItem="9Ef-Nz-N2z" secondAttribute="trailing" id="dWS-AI-J6i"/>
+                                            <constraint firstItem="9Ef-Nz-N2z" firstAttribute="top" secondItem="4C8-cn-QWi" secondAttribute="top" id="oKK-GV-C1r"/>
                                             <constraint firstAttribute="height" constant="50" id="xj3-XT-0oE"/>
                                         </constraints>
                                     </stackView>
@@ -222,7 +232,7 @@
                                 <color key="sectionIndexBackgroundColor" red="0.96078431610000004" green="0.89803922179999995" blue="0.79607844350000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="sectionIndexTrackingBackgroundColor" red="0.96078431610000004" green="0.89803922179999995" blue="0.80000001190000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="hGm-iS-TC0" style="IBUITableViewCellStyleDefault" id="Lag-zb-w1V">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="recipeDescription" textLabel="hGm-iS-TC0" style="IBUITableViewCellStyleDefault" id="Lag-zb-w1V">
                                         <rect key="frame" x="0.0" y="44.5" width="394" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Lag-zb-w1V" id="K4m-bs-sy0">
