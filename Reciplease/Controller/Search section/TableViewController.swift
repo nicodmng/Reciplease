@@ -68,15 +68,25 @@ class TableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        
         guard let hits = hits else { return }
-
+        guard let nextRecipe = recipes?.hits[indexPath.row].links.next.href else
+        { return }
+        
         if hits.count - 1 == indexPath.row {
-            let nextRecipe = recipes?.hits[0].links?.next?.href
             
-            print("!!!!!!!!!\(nextRecipe)")
-            print("Reload")
+            recipeService.nextRecipes(url: URL(string: nextRecipe) ?? "") { result in
+                DispatchQueue.main.async {
+                    switch result {
+                    case.success(let recipes):
+                        self.recipes = recipes
+                    case .failure (let error):
+                        self.showAlert(message: error.description)
+                    }
+                }
+            }
         }
     }
-    
 }
+
 
