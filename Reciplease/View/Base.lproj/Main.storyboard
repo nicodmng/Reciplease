@@ -25,7 +25,7 @@
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What is in your fridge ?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="of2-A3-2Wn" userLabel="What's in your fridge ? Label">
                                                 <rect key="frame" x="0.0" y="0.0" width="284" height="40.5"/>
-                                                <accessibility key="accessibilityConfiguration" identifier="whatIsInYourFridgeLabel" label="what is in your fridge label"/>
+                                                <accessibility key="accessibilityConfiguration" hint="title" identifier="whatIsInYourFridgeLabel" label="what is in your fridge ?"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="27"/>
                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -35,7 +35,7 @@
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Lemon, Cheese, Sausages..." textAlignment="natural" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="MgX-Hq-Ume" userLabel="Ingredients TextField">
                                                         <rect key="frame" x="0.0" y="0.0" width="316" height="50"/>
-                                                        <accessibility key="accessibilityConfiguration" identifier="ingredient" label="enter an ingredient"/>
+                                                        <accessibility key="accessibilityConfiguration" hint="field for entering an ingredient" identifier="ingredient" label="enter an ingredient"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                         <connections>
@@ -44,7 +44,9 @@
                                                     </textField>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZeH-lF-RWm" userLabel="Add Button">
                                                         <rect key="frame" x="324" y="0.0" width="50" height="50"/>
-                                                        <accessibility key="accessibilityConfiguration" hint="add ingredient to the list" identifier="addIngredientButton" label="add button"/>
+                                                        <accessibility key="accessibilityConfiguration" hint="button who add ingredient to the list" identifier="addIngredientButton" label="add ingredient">
+                                                            <bool key="isElement" value="YES"/>
+                                                        </accessibility>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="50" id="DJ8-uF-NoJ"/>
                                                             <constraint firstAttribute="width" constant="50" id="gyO-8Q-U58"/>
@@ -93,7 +95,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Ef-Nz-N2z" userLabel="Clear Button">
                                                 <rect key="frame" x="329" y="0.0" width="55" height="50"/>
                                                 <color key="backgroundColor" red="0.97254908080000002" green="0.93333339689999995" blue="0.88627451660000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <accessibility key="accessibilityConfiguration" hint="remove recipes from the list" identifier="removeRecipesButton" label="remove recipes"/>
+                                                <accessibility key="accessibilityConfiguration" hint="button who removes recipes from the list" identifier="removeRecipesButton" label="remove recipes"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="55" id="o12-Y7-lqq"/>
                                                 </constraints>
@@ -124,7 +126,7 @@
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M1Z-n6-bJS" userLabel="Search Button">
                                 <rect key="frame" x="13" y="692.5" width="388" height="65"/>
-                                <accessibility key="accessibilityConfiguration" hint="allow to search recipes" identifier="searchRecipesButton" label="search for recipes button"/>
+                                <accessibility key="accessibilityConfiguration" hint="button to search recipes" identifier="searchRecipesButton" label="search for recipes button"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="65" id="w0B-lv-uS9"/>
                                 </constraints>
@@ -205,7 +207,7 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="o4Y-ow-DOw">
                                 <rect key="frame" x="0.0" y="83" width="414" height="275"/>
                                 <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
-                                <accessibility key="accessibilityConfiguration" identifier="recipeImage" label="recipe image"/>
+                                <accessibility key="accessibilityConfiguration" hint="window who display recipe image" identifier="recipeImage" label="recipe image"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="275" id="Mg2-Yj-jtE"/>
                                 </constraints>
@@ -236,14 +238,14 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <accessibility key="accessibilityConfiguration" hint="ingredient recipe list" identifier="ingredientList"/>
+                                        <accessibility key="accessibilityConfiguration" hint="list that display the ingredients of the recipe" identifier="ingredientList"/>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nbZ-ei-0dQ">
                                 <rect key="frame" x="30" y="719" width="354" height="56"/>
                                 <color key="backgroundColor" red="0.87058818339999999" green="0.7607843876" blue="0.58823531870000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <accessibility key="accessibilityConfiguration" identifier="letsCookButton" label="go to the recipe"/>
+                                <accessibility key="accessibilityConfiguration" hint="button to find for recipes" identifier="letsCookButton" label="go to the recipe"/>
                                 <color key="tintColor" red="0.87058818339999999" green="0.7607843876" blue="0.58823531870000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Let's cook !">
@@ -257,7 +259,7 @@
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iIu-HM-n1o">
                                 <rect key="frame" x="20" y="313" width="374" height="36"/>
-                                <accessibility key="accessibilityConfiguration" label="recipe Label"/>
+                                <accessibility key="accessibilityConfiguration" hint="recipe title" identifier="labelRecipe"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="iIu-HM-n1o" secondAttribute="height" multiplier="384:37" id="xmw-1A-awT"/>
                                 </constraints>

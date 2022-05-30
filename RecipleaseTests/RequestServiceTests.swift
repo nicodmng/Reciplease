@@ -72,8 +72,7 @@ class RequestServiceTests: XCTestCase {
                 XCTFail("Test getData method with correct data failed.")
                 return
             }
-            XCTAssertTrue(data.hits[0].recipe.ingredientLines == ["1 cup chocolate morsels (dark, milk, or white)",
-                                                                  "16-20 chocolate truffles"])
+            XCTAssertTrue(data.hits[0].recipe.ingredientLines == ["1 cup chocolate morsels (dark, milk, or white)", "16-20 chocolate truffles"])
             expectation.fulfill()
         }
         wait(for: [expectation], timeout: 0.01)

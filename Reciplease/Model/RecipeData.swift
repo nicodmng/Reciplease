@@ -12,7 +12,7 @@ struct RecipeData: Decodable {
     
     struct Hit: Decodable {
         let recipe: Recipe
-        let links: WelcomeLinks
+        //let links: WelcomeLinks
         
         struct Recipe: Decodable {
             let label: String
@@ -23,12 +23,12 @@ struct RecipeData: Decodable {
             let url: String
         }
         
-        struct WelcomeLinks: Decodable {
-            let next: Next
-        }
-        struct Next: Decodable {
-            let href: String
-        }
+//        struct WelcomeLinks: Decodable {
+//            let next: Next
+//        }
+//        struct Next: Decodable {
+//            let href: String
+//        }
     }
 
 }
