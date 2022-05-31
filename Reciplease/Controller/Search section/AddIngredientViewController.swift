@@ -85,6 +85,7 @@ class AddIngredientViewController: UIViewController {
         if segue.identifier == segueIdentifier {
             let successVC = segue.destination as? TableViewController
             successVC?.hits = recipes?.hits
+            successVC?.nextPageUrl = recipes?.links?.next.href
         }
     }
     

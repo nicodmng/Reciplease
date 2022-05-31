@@ -12,6 +12,7 @@ class TableViewController: UITableViewController {
     // MARK: - Properties
     
     var hits: [RecipeData.Hit]?
+    var nextPageUrl: String?
     var recipe: Recipe?
     private var recipes: RecipeData?
     var recipeService = RecipeService()
@@ -70,10 +71,10 @@ class TableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         
         guard let hits = hits else { return }
-//        guard let nextRecipe = recipes?.hits[indexPath.row].links.next.href else
-//        { return }
+
         
         if hits.count - 1 == indexPath.row {
+            print(nextPageUrl)
             
 //            recipeService.nextRecipes(url: URL(string: nextRecipe) ?? "") { result in
 //                DispatchQueue.main.async {

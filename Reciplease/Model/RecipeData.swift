@@ -9,11 +9,11 @@ import Foundation
 
 struct RecipeData: Decodable {
     let hits: [Hit]
-    
+    let links: RecipeDataLinks?
+
     struct Hit: Decodable {
         let recipe: Recipe
-        //let links: WelcomeLinks
-        
+
         struct Recipe: Decodable {
             let label: String
             let yield: Int?
@@ -22,14 +22,17 @@ struct RecipeData: Decodable {
             let ingredientLines: [String]
             let url: String
         }
-        
-//        struct WelcomeLinks: Decodable {
-//            let next: Next
-//        }
-//        struct Next: Decodable {
-//            let href: String
-//        }
     }
-
 }
+    
+struct RecipeDataLinks: Decodable {
+    let next: Next
+}
+        
+struct Next: Decodable {
+    let href: String?
+}
+
+
+
 
