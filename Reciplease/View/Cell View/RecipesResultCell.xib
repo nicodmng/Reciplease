@@ -18,7 +18,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cnA-Ej-beL" userLabel="Recipe Image View">
-                        <rect key="frame" x="0.0" y="0.0" width="410" height="150"/>
+                        <rect key="frame" x="0.0" y="2" width="410" height="148"/>
                     </imageView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eLJ-g8-SAA" userLabel="Yeld and Time View">
                         <rect key="frame" x="340" y="10" width="60" height="39"/>
@@ -100,9 +100,11 @@
                 <constraints>
                     <constraint firstItem="eLJ-g8-SAA" firstAttribute="top" secondItem="G3a-1m-dtP" secondAttribute="top" constant="10" id="AqK-oQ-AEq"/>
                     <constraint firstAttribute="trailing" secondItem="eLJ-g8-SAA" secondAttribute="trailing" constant="10" id="Az8-jo-1wo"/>
-                    <constraint firstItem="cnA-Ej-beL" firstAttribute="leading" secondItem="G3a-1m-dtP" secondAttribute="leading" id="BSC-v6-1t4"/>
                     <constraint firstAttribute="bottom" secondItem="d5X-w0-zpD" secondAttribute="bottom" constant="8" id="FQk-2s-cC2"/>
-                    <constraint firstItem="cnA-Ej-beL" firstAttribute="top" secondItem="G3a-1m-dtP" secondAttribute="top" id="L7l-qL-rzi"/>
+                    <constraint firstAttribute="bottom" secondItem="cnA-Ej-beL" secondAttribute="bottom" id="IEE-bB-3hO"/>
+                    <constraint firstItem="cnA-Ej-beL" firstAttribute="top" secondItem="G3a-1m-dtP" secondAttribute="top" constant="2" id="RnS-7v-nSY"/>
+                    <constraint firstAttribute="trailing" secondItem="cnA-Ej-beL" secondAttribute="trailing" id="hYB-UE-1He"/>
+                    <constraint firstItem="cnA-Ej-beL" firstAttribute="leading" secondItem="G3a-1m-dtP" secondAttribute="leading" id="nqj-Fb-71y"/>
                     <constraint firstAttribute="bottom" secondItem="cnA-Ej-beL" secondAttribute="bottom" id="so6-Zf-6y5"/>
                     <constraint firstItem="d5X-w0-zpD" firstAttribute="leading" secondItem="G3a-1m-dtP" secondAttribute="leading" constant="12" id="xuk-4j-xgq"/>
                     <constraint firstAttribute="trailing" secondItem="cnA-Ej-beL" secondAttribute="trailing" id="yvz-i7-jAg"/>

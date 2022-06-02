@@ -93,7 +93,6 @@ class FavoriteViewController: UITableViewController {
     // MARK: - Functions
 
     // Text if favorite is empty :
-    
     override func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         let informationForUser = UILabel()
         informationForUser.text = "Favorites recipes list is empty"

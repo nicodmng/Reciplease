@@ -24,7 +24,7 @@ class TableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         tableView.register(UINib(nibName: "RecipesResultCell", bundle: nil), forCellReuseIdentifier: cellReuseIdentifier)
     }
     
@@ -45,19 +45,14 @@ class TableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "recipeCell", for: indexPath) as? RecipesResultCell
         else { return UITableViewCell() }
-        
         cell.recipe = hits?[indexPath.row].recipe
-        
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let hits = hits else { return }
-        
         let recipe = hits[indexPath.row].recipe
-        
         self.recipe = Recipe(labelData: recipe.label, yieldData: String(recipe.yield ?? 0), totalTimeData: String(recipe.totalTime ?? 0), imageData: recipe.image, ingredientLinesData: recipe.ingredientLines, urlData: recipe.url)
-        
         performSegue(withIdentifier: "segueToRecipeDetailFirst", sender: nil)
     }
     

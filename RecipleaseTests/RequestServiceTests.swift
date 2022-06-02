@@ -13,8 +13,12 @@ import Alamofire
 
 class RequestServiceTests: XCTestCase {
 
+    // MARK: - Properties
+    
     let ingredient = "chocolate"
     let nextPageUrl = "https://api.edamam.com/api/recipes/v2?q=chocolate&app_key=046769644acb80f3d20a31450e827f43&_cont=CHcVQBtNNQphDmgVQntAEX4BYlFtDAEPRmZIB2YXZlR6BAcDUXlSBjcWa1cgDAdTQWYSBjBFMQN1UAMDEWEVA2JHZAEmDVUVLnlSVSBMPkd5BgMbUSYRVTdgMgksRlpSAAcRXTVGcV84SU4%3D&type=public&app_id=dde6421f"
+    
+    // MARK: - Test functions
     
     func testGetRecipe_WhenNoDataIsPassed_ThenShouldReturnFailedCallback() {
         let session = FakeRecipeSession(fakeResponse: FakeResponse(response: nil, data: nil))
@@ -77,9 +81,6 @@ class RequestServiceTests: XCTestCase {
         }
         wait(for: [expectation], timeout: 0.01)
     }
-    
-    
-    
     
     func testGetNextRecipes_WhenNoDataIsPassed_ThenShouldReturnFailedCallback() {
         let session = FakeRecipeSession(fakeResponse: FakeResponse(response: nil, data: nil))
