@@ -74,19 +74,16 @@ class TableViewController: UITableViewController {
         if hits.count - 1 == indexPath.row {
             guard let nextPage = nextPageUrl else { return }
             
-            // print OK
-            print(nextPage)
-            // print OK
-            
-            recipeService.nextRecipes(url: nextPage) { result in
+            recipeService.nextRecipes(url: nextPage) { [weak self] result in
                 switch result {
                 case.success(let recipes):
-                    self.recipes = recipes
+                    self?.hits! += recipes.hits
+                    self?.nextPageUrl = recipes.links?.next.href
+                    self?.tableView.reloadData()
                 case .failure (let error):
-                    self.showAlert(message: error.description)
+                    self?.showAlert(message: error.description)
                 }
             }
         }
     }
 }
-
