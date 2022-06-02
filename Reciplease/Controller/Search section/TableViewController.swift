@@ -72,7 +72,13 @@ class TableViewController: UITableViewController {
         guard let hits = hits else { return }
         
         if hits.count - 1 == indexPath.row {
-            recipeService.nextRecipes(url: nextPageUrl ?? "") { result in
+            guard let nextPage = nextPageUrl else { return }
+            
+            // print OK
+            print(nextPage)
+            // print OK
+            
+            recipeService.nextRecipes(url: nextPage) { result in
                 switch result {
                 case.success(let recipes):
                     self.recipes = recipes
