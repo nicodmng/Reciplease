@@ -63,16 +63,16 @@ class AddIngredientViewController: UIViewController {
         if listIngredientTextView.text.isEmpty {
             showAlert(message: "Your list of ingredient is empty\n Please add an ingredient")
         } else {
-            service.getRecipe(ingredients: ingredients) { result in
+            service.getRecipe(ingredients: ingredients) { [weak self] result in
                 DispatchQueue.main.async {
                     switch result {
                     case.success(let recipes):
-                        self.recipes = recipes
-                        self.performSegue(withIdentifier: self.segueIdentifier, sender: nil)
-                        self.searchButton.isEnabled = true
+                        self?.recipes = recipes
+                        self?.performSegue(withIdentifier: self?.segueIdentifier ?? "", sender: nil)
+                        self?.searchButton.isEnabled = true
                     case .failure (let error):
-                        self.showAlert(message: error.description)
-                        self.searchButton.isEnabled = true
+                        self?.showAlert(message: error.description)
+                        self?.searchButton.isEnabled = true
                     }
                 }
             }
