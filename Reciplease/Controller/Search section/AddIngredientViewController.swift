@@ -35,7 +35,7 @@ class AddIngredientViewController: UIViewController {
     
     @IBAction func searchButtonPressed(_ sender: Any) {
         getRecipes()
-        searchButton.isEnabled = false
+        
     }
     
     // MARK: - Methods
@@ -62,6 +62,7 @@ class AddIngredientViewController: UIViewController {
     private func getRecipes() {
         if listIngredientTextView.text.isEmpty {
             showAlert(message: "Your list of ingredient is empty\n Please add an ingredient")
+            searchButton.isEnabled = true
         } else {
             service.getRecipe(ingredients: ingredients) { [weak self] result in
                 DispatchQueue.main.async {
@@ -69,7 +70,6 @@ class AddIngredientViewController: UIViewController {
                     case.success(let recipes):
                         self?.recipes = recipes
                         self?.performSegue(withIdentifier: self?.segueIdentifier ?? "", sender: nil)
-                        self?.searchButton.isEnabled = true
                     case .failure (let error):
                         self?.showAlert(message: error.description)
                         self?.searchButton.isEnabled = true
@@ -77,6 +77,8 @@ class AddIngredientViewController: UIViewController {
                 }
             }
         }
+        self.searchButton.isEnabled = false
+
     }
     
     // MARK: - Functions

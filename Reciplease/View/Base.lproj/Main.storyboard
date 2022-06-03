@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LlE-xM-ifi">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Image references" minToolsVersion="12.0"/>
@@ -14,27 +14,27 @@
             <objects>
                 <viewController id="308-qY-Kzb" customClass="AddIngredientViewController" customModule="Reciplease" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UNV-dP-vsy">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v0G-g3-IWs" userLabel="Add Ingredient View">
-                                <rect key="frame" x="10" y="148" width="394" height="118.5"/>
+                                <rect key="frame" x="10" y="148" width="370" height="111.33333333333331"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="zMG-Eb-NfO">
-                                        <rect key="frame" x="10" y="10" width="374" height="98.5"/>
+                                        <rect key="frame" x="10" y="10" width="350" height="91.333333333333329"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What is in your fridge ?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="of2-A3-2Wn" userLabel="What's in your fridge ? Label">
-                                                <rect key="frame" x="0.0" y="0.0" width="257.5" height="40.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="257.66666666666669" height="33.333333333333336"/>
                                                 <accessibility key="accessibilityConfiguration" hint="title" identifier="whatIsInYourFridgeLabel" label="what is in your fridge ?"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="xqB-HB-JJZ">
-                                                <rect key="frame" x="0.0" y="48.5" width="374" height="50"/>
+                                                <rect key="frame" x="0.0" y="41.333333333333343" width="350" height="50"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Lemon, Cheese, Sausages..." textAlignment="natural" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="MgX-Hq-Ume" userLabel="Ingredients TextField">
-                                                        <rect key="frame" x="0.0" y="0.0" width="316" height="50"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="292" height="50"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <accessibility key="accessibilityConfiguration" hint="field for entering an ingredient" identifier="ingredient" label="enter an ingredient"/>
                                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -45,7 +45,7 @@
                                                         </connections>
                                                     </textField>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZeH-lF-RWm" userLabel="Add Button">
-                                                        <rect key="frame" x="324" y="0.0" width="50" height="50"/>
+                                                        <rect key="frame" x="300" y="0.0" width="50" height="50"/>
                                                         <accessibility key="accessibilityConfiguration" hint="button who add ingredient to the list" identifier="addIngredientButton" label="add ingredient">
                                                             <bool key="isElement" value="YES"/>
                                                         </accessibility>
@@ -88,20 +88,20 @@
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="p0z-DG-cRa">
-                                <rect key="frame" x="15" y="320.5" width="384" height="352"/>
+                                <rect key="frame" x="15" y="313.33333333333331" width="360" height="329.99999999999994"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="4C8-cn-QWi">
-                                        <rect key="frame" x="0.0" y="0.0" width="384" height="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="360" height="50"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your ingredients" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qw8-nP-ew1" userLabel="Your ingredients Label">
-                                                <rect key="frame" x="0.0" y="0.0" width="311" height="50"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="287" height="50"/>
                                                 <accessibility key="accessibilityConfiguration" hint="list title" identifier="yourIngredientsLabel" label="your ingredient label"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="27"/>
                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Ef-Nz-N2z" userLabel="Clear Button">
-                                                <rect key="frame" x="334" y="0.0" width="50" height="50"/>
+                                                <rect key="frame" x="310" y="0.0" width="50" height="50"/>
                                                 <color key="backgroundColor" red="0.97254908080000002" green="0.93333339689999995" blue="0.88627451660000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <accessibility key="accessibilityConfiguration" hint="button who removes recipes from the list" identifier="removeRecipesButton" label="remove recipes"/>
                                                 <constraints>
@@ -124,7 +124,7 @@
                                         </constraints>
                                     </stackView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="QhT-X0-eh0">
-                                        <rect key="frame" x="0.0" y="58" width="384" height="294"/>
+                                        <rect key="frame" x="0.0" y="58" width="360" height="272"/>
                                         <color key="backgroundColor" red="0.9529411793" green="0.87953554599999995" blue="0.73754897379999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <accessibility key="accessibilityConfiguration" hint="your ingredient selected list" identifier="ingredientSelectedList" label="your ingredients"/>
                                         <color key="textColor" systemColor="labelColor"/>
@@ -137,7 +137,7 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M1Z-n6-bJS" userLabel="Search Button">
-                                <rect key="frame" x="13" y="692.5" width="388" height="65"/>
+                                <rect key="frame" x="13" y="663.33333333333337" width="364" height="65"/>
                                 <accessibility key="accessibilityConfiguration" hint="button to search recipes" identifier="searchRecipesButton" label="search for recipes button"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="65" id="w0B-lv-uS9"/>
@@ -201,10 +201,10 @@
             <objects>
                 <tableViewController id="0qE-ni-81Q" customClass="TableViewController" customModule="Reciplease" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="NYR-kX-wRt">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.9529411793" green="0.87953554599999995" blue="0.73754897379999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        <color key="sectionIndexBackgroundColor" red="0.87058818339999999" green="0.7607843876" blue="0.58823531870000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.945107162" green="0.90587967629999999" blue="0.84314227100000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="sectionIndexBackgroundColor" red="0.945107162" green="0.90587967629999999" blue="0.84314227100000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <connections>
                             <outlet property="dataSource" destination="0qE-ni-81Q" id="VP9-NZ-Ahn"/>
                             <outlet property="delegate" destination="0qE-ni-81Q" id="4Y9-zH-cAF"/>
@@ -224,64 +224,44 @@
             <objects>
                 <viewController id="88n-M6-qN1" customClass="RecipesDetailViewController" customModule="Reciplease" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6PB-2T-y8R">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="o4Y-ow-DOw">
-                                <rect key="frame" x="0.0" y="83" width="414" height="275"/>
+                                <rect key="frame" x="0.0" y="83" width="390" height="275"/>
                                 <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                                 <accessibility key="accessibilityConfiguration" hint="window who display recipe image" identifier="recipeImage" label="recipe image"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="275" id="Mg2-Yj-jtE"/>
+                                    <constraint firstAttribute="width" secondItem="o4Y-ow-DOw" secondAttribute="height" multiplier="78:55" id="eM6-qb-Ijc"/>
                                 </constraints>
                             </imageView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" sectionIndexMinimumDisplayRowCount="1" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="14u-BV-fWL">
-                                <rect key="frame" x="10" y="358" width="394" height="275"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.96078431610000004" green="0.89803922179999995" blue="0.79607844350000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" sectionIndexMinimumDisplayRowCount="1" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="14u-BV-fWL">
+                                <rect key="frame" x="5" y="358" width="390" height="292"/>
+                                <color key="backgroundColor" systemColor="tintColor"/>
+                                <color key="tintColor" red="0.945107162" green="0.90587967629999999" blue="0.84314227100000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="14u-BV-fWL" secondAttribute="height" multiplier="195:146" id="poF-zu-QQk"/>
+                                </constraints>
                                 <color key="separatorColor" red="0.96078431610000004" green="0.89803922179999995" blue="0.80000001190000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="sectionIndexColor" red="0.96078431610000004" green="0.89803922179999995" blue="0.80000001190000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="sectionIndexBackgroundColor" red="0.96078431610000004" green="0.89803922179999995" blue="0.79607844350000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="sectionIndexTrackingBackgroundColor" red="0.96078431610000004" green="0.89803922179999995" blue="0.80000001190000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="recipeDescription" textLabel="hGm-iS-TC0" style="IBUITableViewCellStyleDefault" id="Lag-zb-w1V">
-                                        <rect key="frame" x="0.0" y="44.5" width="394" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Lag-zb-w1V" id="K4m-bs-sy0">
-                                            <rect key="frame" x="0.0" y="0.0" width="394" height="44"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hGm-iS-TC0">
-                                                    <rect key="frame" x="20" y="0.0" width="354" height="44"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                        <accessibility key="accessibilityConfiguration" hint="list that display the ingredients of the recipe" identifier="ingredientList"/>
-                                    </tableViewCell>
-                                </prototypes>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iIu-HM-n1o">
-                                <rect key="frame" x="20" y="313" width="374" height="36"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iIu-HM-n1o">
+                                <rect key="frame" x="20" y="313" width="350" height="33.666666666666686"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration" hint="recipe title" identifier="labelRecipe"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="iIu-HM-n1o" secondAttribute="height" multiplier="384:37" id="xmw-1A-awT"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nbZ-ei-0dQ">
-                                <rect key="frame" x="13" y="712" width="388" height="65"/>
+                                <rect key="frame" x="13" y="669" width="364" height="56"/>
                                 <color key="backgroundColor" red="0.87058818339999999" green="0.7607843876" blue="0.58823531870000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <accessibility key="accessibilityConfiguration" hint="button to find for recipes" identifier="letsCookButton" label="go to the recipe"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="388" id="joP-E8-L6v"/>
-                                    <constraint firstAttribute="height" constant="65" id="llL-6D-2sz"/>
+                                    <constraint firstAttribute="height" constant="56" id="FD3-qU-mEf"/>
+                                    <constraint firstAttribute="width" secondItem="nbZ-ei-0dQ" secondAttribute="height" multiplier="13:2" id="hMs-QX-hVS"/>
                                 </constraints>
                                 <color key="tintColor" red="0.87058818339999999" green="0.7607843876" blue="0.58823531870000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
@@ -307,23 +287,21 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="SC5-vy-jmN"/>
-                        <color key="backgroundColor" red="0.93725490570000003" green="0.90588235859999999" blue="0.85098040100000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.945107162" green="0.90587967629999999" blue="0.84314227100000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="SC5-vy-jmN" firstAttribute="trailing" secondItem="iIu-HM-n1o" secondAttribute="trailing" constant="20" id="IJD-f8-jaZ"/>
-                            <constraint firstItem="o4Y-ow-DOw" firstAttribute="top" secondItem="6PB-2T-y8R" secondAttribute="top" constant="83" id="MLE-wp-2PC"/>
-                            <constraint firstItem="nbZ-ei-0dQ" firstAttribute="centerX" secondItem="6PB-2T-y8R" secondAttribute="centerX" id="NHQ-7P-qve"/>
-                            <constraint firstItem="SC5-vy-jmN" firstAttribute="bottom" secondItem="nbZ-ei-0dQ" secondAttribute="bottom" constant="36" id="Qia-qF-NtO"/>
-                            <constraint firstItem="iIu-HM-n1o" firstAttribute="top" secondItem="SC5-vy-jmN" secondAttribute="top" constant="225" id="Ssb-93-sOW"/>
-                            <constraint firstItem="o4Y-ow-DOw" firstAttribute="leading" secondItem="SC5-vy-jmN" secondAttribute="leading" id="aHf-zH-Mh6"/>
-                            <constraint firstItem="nbZ-ei-0dQ" firstAttribute="centerX" secondItem="6PB-2T-y8R" secondAttribute="centerX" id="aRU-Pp-NGp"/>
-                            <constraint firstItem="nbZ-ei-0dQ" firstAttribute="leading" secondItem="SC5-vy-jmN" secondAttribute="leading" constant="13" id="jbR-OL-MJZ"/>
-                            <constraint firstItem="iIu-HM-n1o" firstAttribute="leading" secondItem="SC5-vy-jmN" secondAttribute="leading" constant="20" id="mH9-zS-ezQ"/>
-                            <constraint firstItem="o4Y-ow-DOw" firstAttribute="trailing" secondItem="SC5-vy-jmN" secondAttribute="trailing" id="nm6-ws-A5v"/>
-                            <constraint firstItem="SC5-vy-jmN" firstAttribute="trailing" secondItem="nbZ-ei-0dQ" secondAttribute="trailing" constant="13" id="sYj-n4-hgY"/>
+                            <constraint firstItem="nbZ-ei-0dQ" firstAttribute="centerX" secondItem="6PB-2T-y8R" secondAttribute="centerX" id="22L-EX-k3Q"/>
+                            <constraint firstItem="14u-BV-fWL" firstAttribute="leading" secondItem="SC5-vy-jmN" secondAttribute="leading" constant="5" id="2M6-6V-4x5"/>
+                            <constraint firstItem="o4Y-ow-DOw" firstAttribute="top" secondItem="6PB-2T-y8R" secondAttribute="top" constant="83" id="8Bc-M1-hdk"/>
+                            <constraint firstItem="o4Y-ow-DOw" firstAttribute="leading" secondItem="SC5-vy-jmN" secondAttribute="leading" id="AJN-Qm-FrQ"/>
+                            <constraint firstItem="o4Y-ow-DOw" firstAttribute="trailing" secondItem="SC5-vy-jmN" secondAttribute="trailing" id="VaC-UZ-gNV"/>
+                            <constraint firstItem="14u-BV-fWL" firstAttribute="top" secondItem="o4Y-ow-DOw" secondAttribute="bottom" id="gtv-Bx-Bfc"/>
+                            <constraint firstItem="SC5-vy-jmN" firstAttribute="bottom" secondItem="nbZ-ei-0dQ" secondAttribute="bottom" constant="36" id="uAK-pA-FK8"/>
+                            <constraint firstItem="14u-BV-fWL" firstAttribute="trailing" secondItem="SC5-vy-jmN" secondAttribute="trailing" constant="5" id="udi-zZ-YpV"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="4vV-Zn-raw">
                         <barButtonItem key="rightBarButtonItem" image="star" catalog="system" id="v0P-sj-2xB" userLabel="Add Favorite Button Items">
+                            <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="favoriteRecipePressed:" destination="88n-M6-qN1" id="Gmd-Dh-HP9"/>
                             </connections>
@@ -338,7 +316,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ym1-Eg-07J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2961" y="358"/>
+            <point key="canvasLocation" x="2960" y="357.58293838862556"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="5Ae-AN-1v9">
@@ -373,9 +351,10 @@
                     </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="tJ4-gi-UxD">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.945107162" green="0.90587967629999999" blue="0.84314227100000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="32"/>
                             <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -397,7 +376,7 @@
                     <tabBarItem key="tabBarItem" title="Favorite" image="star" catalog="system" id="5oU-eo-f1j"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="b4Y-wH-A5j">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -414,7 +393,7 @@
             <objects>
                 <tableViewController id="Bb3-7A-cFe" customClass="FavoriteViewController" customModule="Reciplease" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="pJO-xP-0PN">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.94227198030000003" green="0.9529411793" blue="0.84884341129999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <color key="separatorColor" red="0.94227198030000003" green="0.9529411793" blue="0.84884341129999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -451,6 +430,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

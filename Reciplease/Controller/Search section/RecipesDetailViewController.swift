@@ -112,6 +112,7 @@ extension RecipesDetailViewController: UITableViewDelegate, UITableViewDataSourc
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: UITableViewCell = self.ingredientsList.dequeueReusableCell(withIdentifier: cellReuseIdentifierDetail, for: indexPath)
         cell.textLabel?.text = self.recipe?.ingredientLinesData[indexPath.row]
+        cell.backgroundColor = .init(red: 241, green: 231, blue: 215, alpha: 0)
         
         return cell
     }

@@ -97,6 +97,7 @@
                         </constraints>
                     </stackView>
                 </subviews>
+                <color key="backgroundColor" red="0.945107162" green="0.90587967629999999" blue="0.84314227100000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 <constraints>
                     <constraint firstItem="eLJ-g8-SAA" firstAttribute="top" secondItem="G3a-1m-dtP" secondAttribute="top" constant="10" id="AqK-oQ-AEq"/>
                     <constraint firstAttribute="trailing" secondItem="eLJ-g8-SAA" secondAttribute="trailing" constant="10" id="Az8-jo-1wo"/>
