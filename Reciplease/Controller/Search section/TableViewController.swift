@@ -74,10 +74,11 @@ class TableViewController: UITableViewController {
                     self?.hits! += recipes.hits
                     self?.nextPageUrl = recipes.links?.next.href
                     self?.tableView.reloadData()
-                case .failure (let error):
+                case .failure (let error©):
                     self?.showAlert(message: error.description)
                 }
             }
         }
     }
+
 }

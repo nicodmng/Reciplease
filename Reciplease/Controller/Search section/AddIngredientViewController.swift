@@ -31,10 +31,12 @@ class AddIngredientViewController: UIViewController {
     @IBAction func clearButton(_ sender: Any) {
         listIngredientTextView.text = ""
         ingredients.removeAll()
+        self.searchButton.isEnabled = true
     }
     
     @IBAction func searchButtonPressed(_ sender: Any) {
         getRecipes()
+        searchButton.isEnabled = false
         
     }
     
@@ -77,7 +79,6 @@ class AddIngredientViewController: UIViewController {
                 }
             }
         }
-        self.searchButton.isEnabled = false
 
     }
     
