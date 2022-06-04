@@ -24,7 +24,7 @@ class TableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         tableView.register(UINib(nibName: "RecipesResultCell", bundle: nil), forCellReuseIdentifier: cellReuseIdentifier)
     }
     
@@ -74,11 +74,23 @@ class TableViewController: UITableViewController {
                     self?.hits! += recipes.hits
                     self?.nextPageUrl = recipes.links?.next.href
                     self?.tableView.reloadData()
-                case .failure (let error©):
+                case .failure (let error):
                     self?.showAlert(message: error.description)
                 }
             }
         }
+        
+        let lastSectionIndex = tableView.numberOfSections - 1
+        let lastRowIndex = tableView.numberOfRows(inSection: lastSectionIndex) - 1
+        if indexPath.section ==  lastSectionIndex && indexPath.row == lastRowIndex {
+            let spinner = UIActivityIndicatorView(style: .gray)
+            spinner.startAnimating()
+            spinner.frame = CGRect(x: CGFloat(0), y: CGFloat(0), width: tableView.bounds.width, height: CGFloat(44))
+            
+            self.tableView.tableFooterView = spinner
+            self.tableView.tableFooterView?.isHidden = false
+        }
     }
-
+    
 }
+
