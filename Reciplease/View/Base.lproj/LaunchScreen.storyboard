@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="5PL-7h-bXj">
-                                <rect key="frame" x="32" y="226.5" width="350" height="443"/>
+                                <rect key="frame" x="32" y="228" width="350" height="440"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="reciplease_logo_contour" translatesAutoresizingMaskIntoConstraints="NO" id="nsZ-n5-RZL">
                                         <rect key="frame" x="0.0" y="0.0" width="350" height="350"/>
@@ -26,9 +26,9 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reciplease" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="owM-0d-lNf">
-                                        <rect key="frame" x="27.5" y="358" width="295" height="85"/>
+                                        <rect key="frame" x="18.5" y="358" width="313.5" height="82"/>
                                         <accessibility key="accessibilityConfiguration" hint="title of the app" identifier="titleApp" label="Reciplease"/>
-                                        <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="60"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="60"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -49,6 +49,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="reciplease_logo_contour" width="166" height="166"/>
+        <image name="reciplease_logo_contour" width="166.5" height="166.5"/>
     </resources>
 </document>
